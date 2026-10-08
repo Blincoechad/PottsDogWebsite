@@ -27,17 +27,20 @@ navLinks.forEach(link => {
 const signupForm = document.getElementById('signupForm');
 const signupSuccess = document.getElementById('signupSuccess');
 
-signupForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+// the signup form only exists on the Get Involved page
+if (signupForm) {
+    signupForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    const name = document.getElementById('signupName').value.trim();
-    const email = document.getElementById('signupEmail').value.trim();
+        const name = document.getElementById('signupName').value.trim();
+        const email = document.getElementById('signupEmail').value.trim();
 
-    if (name && email) {
-        signupForm.style.display = 'none';
-        signupSuccess.classList.add('show');
-    }
-});                                          
+        if (name && email) {
+            signupForm.style.display = 'none';
+            signupSuccess.classList.add('show');
+        }
+    });
+}                                          
 
 // ── overlay code for donating ──
 const donateBtn     = document.getElementById('donateBtn');
@@ -59,20 +62,23 @@ function closeOverlay() {
     donateForm.reset();
 }
 
-donateBtn.addEventListener('click', openOverlay);
-closeBtn.addEventListener('click', closeOverlay);
+// the donate overlay only exists on the Get Involved page
+if (donateBtn && overlay) {
+    donateBtn.addEventListener('click', openOverlay);
+    closeBtn.addEventListener('click', closeOverlay);
 
-// close when clicking the dark backdrop
-overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) closeOverlay();
-});
+    // close when clicking the dark backdrop
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeOverlay();
+    });
 
 
-// Show a success message on submit, then it will close after 3 seconds
-donateForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    donateForm.style.display = 'none';
-    donateSuccess.style.display = 'block';
+    // Show a success message on submit, then it will close after 3 seconds
+    donateForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        donateForm.style.display = 'none';
+        donateSuccess.style.display = 'block';
 
-    setTimeout(closeOverlay, 3000);
-});
+        setTimeout(closeOverlay, 3000);
+    });
+}
