@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-dark);
@@ -42,9 +42,7 @@ a {
   color: inherit;
 }
 p {
-  text-indent: 1.5rem;
-  font-weight: bold;
-  font-size: larger;
+  font-size: 1.05rem;
 }
 .homePage-title {
   color: red;
@@ -164,9 +162,8 @@ lines on hamburger menu */
   padding: 1rem 1.25rem;
   border-radius: 10px;
   text-decoration: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: larger;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: #f3ebeb;
   background-color: rgb(22, 21, 21);
 
@@ -298,7 +295,7 @@ lines on hamburger menu */
 }
 
 .section {
-  padding: 3rem 1rem;
+  padding: 4rem 1.25rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -308,6 +305,11 @@ lines on hamburger menu */
   padding-bottom: 4rem;
   padding-left: 2rem;
   border-radius: 10px;
+}
+
+/* white text on the green boxes for contrast (dark text failed at 2.9:1) */
+.home-section .section-text:not(.contact-info) {
+  color: #ffffff;
 }
 
 .section:nth-child(even) {
@@ -400,7 +402,7 @@ lines on hamburger menu */
   background-image: url("media/potts_park.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .dr-potts {
@@ -418,7 +420,6 @@ lines on hamburger menu */
 }
 
 .about-text {
-  text-indent: 1.5rem;
   margin: 1.5rem;
   color: rgb(255, 255, 255);
   background-color: rgba(14, 10, 10, 0.536);
@@ -547,8 +548,7 @@ lines on hamburger menu */
   width: 90%; /* mobile default */
 }
 .get-involved {
-  color: rgb(16, 125, 16);
-  text-decoration: underline;
+  color: #ffffff;
   line-height: 1.5;
   margin-top: 1rem;
 }
@@ -602,7 +602,7 @@ lines on hamburger menu */
   border: 2px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  font-family: "Arial", sans-serif;
+  font-family: inherit;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -819,7 +819,7 @@ lines on hamburger menu */
   border: 2px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  font-family: "Arial", sans-serif;
+  font-family: inherit;
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
@@ -905,7 +905,7 @@ lines on hamburger menu */
   border: 2px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: "Arial", sans-serif;
+  font-family: inherit;
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
@@ -1126,7 +1126,7 @@ lines on hamburger menu */
   }
 
   .section {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
 
   .section-content {
@@ -1247,17 +1247,33 @@ lines on hamburger menu */
 
   .nav-item {
     border-bottom: none;
-    background-color: rgba(0, 1, 0, 0.979);
-    margin: 10px;
+    background-color: transparent;
+    margin: 0;
   }
 
   .nav-link {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom-color: var(--secondary-color);
+  }
+
+  /* fixed backgrounds only on desktop; phones fall back badly */
+  .bg-image {
+    background-attachment: fixed;
   }
 
   .section {
-    padding: 4rem 3rem;
+    padding: 5rem 3rem;
   }
 
   .section-title {
