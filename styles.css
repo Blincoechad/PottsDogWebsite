@@ -134,10 +134,11 @@ lines on hamburger menu */
   right: -100%;
   width: 250px;
   height: 100vh;
-  background-color: rgba(55, 59, 55, 0.866);
+  background-color: #123d25;
   transition: right 0.3s ease;
   padding-top: calc(var(--header-height) + 2rem);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .nav.active {
@@ -164,18 +165,16 @@ lines on hamburger menu */
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #f3ebeb;
-  background-color: rgb(38, 76, 38);
-
+  color: #123d25;
+  background-color: #b9d9a3;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     background-color 0.2s ease;
 }
-
 .nav-link:hover {
   transform: scale(1.08);
-  background-color: #61b565;
+  background-color: #8fc46f;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -1238,6 +1237,7 @@ lines on hamburger menu */
   .hamburger {
     display: none;
   }
+  
 
   .nav {
     position: static;
@@ -1263,6 +1263,7 @@ lines on hamburger menu */
     padding: 0.5rem 0.25rem;
     border-radius: 0;
     font-size: 1rem;
+    color: var(--text-light);
     background-color: transparent;
     border-bottom: 2px solid transparent;
   }
