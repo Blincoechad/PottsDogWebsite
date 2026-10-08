@@ -134,7 +134,7 @@ lines on hamburger menu */
   right: -100%;
   width: 250px;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(55, 59, 55, 0.866);
   transition: right 0.3s ease;
   padding-top: calc(var(--header-height) + 2rem);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
@@ -165,7 +165,7 @@ lines on hamburger menu */
   font-weight: 600;
   font-size: 1.1rem;
   color: #f3ebeb;
-  background-color: rgb(22, 21, 21);
+  background-color: rgb(38, 76, 38);
 
   transition:
     transform 0.2s ease,
@@ -175,7 +175,7 @@ lines on hamburger menu */
 
 .nav-link:hover {
   transform: scale(1.08);
-  background-color: #080808;
+  background-color: #61b565;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
