@@ -421,10 +421,12 @@ lines on hamburger menu */
 }
 
 .about-text {
-  margin: 1.5rem;
+  max-width: 40rem; /* same width as the photo above it */
+  margin: 1.5rem auto;
   color: rgb(255, 255, 255);
   background-color: rgba(14, 10, 10, 0.536);
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
 }
 /* contact page */
 .contact-info {
