@@ -1259,7 +1259,8 @@ lines on hamburger menu */
     margin: 0;
   }
 
-  .nav-link {
+  .nav-link,
+  .nav-link:visited {
     padding: 0.5rem 0.25rem;
     border-radius: 0;
     font-size: 1rem;
